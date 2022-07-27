@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/earlyaccess/notonaskharabicui.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="./assets/css/app.css" />
+        <script src="./assets/js/app.js" defer></script>
+        <title>Quran Indonesia</title>
+    </head>
+    <body>
+        <div class="spinner-loading"></div>
+
+        <!-- navigation  -->
+        <nav class="navigation">
+            <span data-link="prev" data-page="1">
+                <i class="bi bi-arrow-left-circle-fill"></i>
+            </span>
+            <span data-items="surah_name_latin"></span>
+            <span data-link="next" data-page="1">
+                <i class="bi bi-arrow-right-circle-fill"></i
+            ></span>
+        </nav>
+
+        <!-- content -->
+        <main class="wrapper">
+            <!-- right menu -->
+            <section class="offcanvas">
+                <div class="offcanvas__header">Daftar Surah</div>
+                <div class="offcanvas-content"></div>
+            </section>
+
+            <!-- main content -->
+            <section id="content" class="content">
+                <h1 class="content__title">
+                    <div>
+                        <span data-items="surah_name_latin"></span>
+                    </div>
+                </h1>
+                <aside id="card"></div>
+            </section>
+        </main>
+        <div class="offcanvas-toggle">
+            <i class="bi bi-arrow-bar-right"></i>
+        </div>
+    </body>
+</html>
+s

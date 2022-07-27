@@ -1,0 +1,169 @@
+body {
+    background-color: #efefef;
+    font-family: 'Gentium Plus', serif;
+    color: rgb(17, 76, 95);
+    font-size: 16px;
+}
+
+.wrapper {
+    margin-top: 98px;
+}
+
+.content {
+    padding: 10px;
+}
+
+.content .content-card {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 1px;
+    border-radius: 3px;
+}
+
+.content-card .card-title {
+    direction: rtl;
+    font-family: 'Noto Naskh Arabic UI', serif;
+    padding: 10px;
+    font-size: x-large;
+    word-wrap: break-word;
+    line-height: 1.7;
+}
+
+.content-card .card-subtitle {
+    direction: ltr;
+    padding: 10px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.content .content__title {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.navigation {
+    background-image: linear-gradient(to right, rgb(17, 76, 95), rgb(70, 76, 95));
+    height: 64px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: x-large;
+    color: #efefef;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.offcanvas {
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.offcanvas.active {
+    display: block;
+}
+
+.offcanvas-content {
+    height: 80%;
+    overflow-y: auto;
+}
+
+.offcanvas>.offcanvas__header {
+    font-size: x-large;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+.offcanvas-content__entry {
+    padding: 20px;
+    font-size: large;
+}
+
+.offcanvas-content__entry>.number {
+    background-color: rgb(17, 76, 95);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    font-size: large;
+}
+
+.offcanvas-content__entry>.entry {
+    margin-left: 10px;
+}
+
+.offcanvas-content__entry.active {
+    background-color: #efefef;
+}
+
+.offcanvas-toggle {
+    display: inline-block;
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    background-color: rgb(17, 76, 95);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.spinner-loading.active {
+    height: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    animation-name: loading;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes loading {
+    0% {
+        background-color: #e53238;
+        width: 20%;
+    }
+
+    20% {
+        background-color: #d34836;
+        width: 40%;
+    }
+
+    60% {
+        background-color: #B01455;
+        width: 60%;
+    }
+
+    100% {
+        background-color: rgb(17, 76, 110);
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .wrapper {
+        max-width: 768px;
+        margin-left: calc(100% - 70%);
+    }
+
+    .offcanvas {
+        top: 64px;
+        left: 0;
+        width: 240px;
+        display: block;
+        border-right: 1px solid rgb(17, 76, 110);
+    }
+
+    .offcanvas-toggle {
+        display: none;
+    }
+}
